@@ -29,7 +29,11 @@ jobs:
           # For more information regarding Static Web App workflow configurations, please visit: https://aka.ms/swaworkflowconfig
           app_location: "/" # App source code path
           api_location: "" # Api source code path - optional
-          output_location: "" # Built app content directory - optional
+          output_location: "/.next" # Built app content directory - optional
+          PUBLIC_URL: ${{ env.PUBLIC_URL }}
+          JSS_EDITING_SECRET: ${{ env.JSS_EDITING_SECRET }}
+          SITECORE_API_KEY: ${{ env.SITECORE_API_KEY }}
+          SITECORE_API_HOST:  ${{ env.SITECORE_API_HOST }}
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
